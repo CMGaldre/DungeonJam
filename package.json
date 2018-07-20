@@ -1,7 +1,7 @@
 {
   "name": "DungeonJam",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collaborative RPG",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -11,24 +11,32 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server.js",
+    "lessify": "lessc less/main.less src/css/main.css"
   },
   "keywords": [],
-  "author": "",
+  "author": "C.M. Galdre",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Mattcnt/DungeonJam/issues"
   },
-  "homepage": "https://github.com/Mattcnt/DungeonJam#readme",
+  "homepage": ".",
   "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
     "browser-sync": "^2.24.5",
-    "gulp": "^3.9.1",
-    "gulp-less": "^3.5.0",
+    "gulp-less": "^4.0.0",
     "less": "^2.7.2",
-    "react-script": "^2.0.5"
-  }
+    "mongoose": "^5.2.4",
+    "nodemon": "^1.18.2",
+    "react-script": "^2.0.5",
+    "tmi.js": "^1.2.1"
+  },
+  "proxy": "http://localhost:8080"
 }

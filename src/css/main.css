@@ -56,8 +56,18 @@
 }
 body {
   font: 36px Futura, Helvetica, sans-serif;
-  margin: 20px;
+  position: relative;
+  width: 1920px;
+  height: 1080px;
   background: #010101;
+  overflow: hidden;
+}
+.game-ui {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0px;
+  left: 0px;
 }
 .title {
   font-family: 'Fredericka the Great', cursive;
@@ -65,10 +75,9 @@ body {
   color: #FF3232;
   font-weight: 300;
   margin-top: 5%;
-}
-.title-box {
   text-align: center;
   margin: 0px auto;
+  float: center;
 }
 .subtext {
   font-family: 'Josefin Slab', serif;
@@ -89,4 +98,58 @@ body {
 }
 .game-info {
   margin-left: 20px;
+}
+.map-wrap {
+  width: 800px;
+  height: 800px;
+  display: block;
+  z-index: -10;
+  position: absolute;
+  top: 225px;
+  left: 225px;
+  overflow: hidden;
+}
+.map {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  z-index: -10;
+}
+ul.map {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  font-size: 0;
+}
+.map li {
+  list-style: none;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+.tile {
+  width: 72px;
+  height: 72px;
+  background-image: url('../assets/tiles/tile.png');
+  padding: 0px;
+}
+.player {
+  background-image: url('../assets/sprites/tinyhero.png');
+  display: block;
+  height: 27px;
+  width: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
