@@ -27,14 +27,13 @@ mongoose.connect('mongodb://'+user+':'+pass+'@'+url, function (err, db) {
    console.log('Connection established to', 'dungeonjam');
  }
 });
-//==========================//
+
+//========Establish Connection==========//
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   // we're connected!
 });
-
-
 
 //====GET ALL Characters===//
 app.get('/api/characters', function(req, res) {
@@ -43,7 +42,7 @@ app.get('/api/characters', function(req, res) {
     })
   })
 
-// Get Single Character
+//====GET Single Character===//
 app.get('/api/character', function(req, res, next){
   Character.findOne({_id: req.query.id}, function(err, character){
         if(err){
@@ -64,8 +63,7 @@ app.post('/api/character', function(req, res) {
   });
 });
 
-
-// Update character
+//====UPDATE Character===//
 app.put('/api/character/:id', function(req, res, next){
     var updchar = {
     name: 'Test' /*req.body.SignatureOfGuest*/,

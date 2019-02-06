@@ -1,19 +1,38 @@
 .map-wrap
 {
-	width:800px;
-	height:800px;
+	width:900px;
+	height:900px;
 	display:block;
 	z-index:-10;
 	position:absolute;
-	top:225px;
-	left:225px;
+	top:0px;
+	left:305px;
 	overflow:hidden;
+	border: 1px solid white;
+}
+
+.fog
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:block;
+	z-index:-9;
+	width:100%;
+	bottom:0px;
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 44%); /* ff3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0)), color-stop(44%, rgba(0,0,0,1))); /* safari4+,chrome */
+	background:-webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 44%); /* safari5.1+,chrome10+ */
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 44%); /* opera 11.10+ */
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 44%); /* ie10+ */
+	background:radial-gradient(ellipse at center, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 44%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=1 ); /* ie6-9 */
 }
 
 .map
 {   position:absolute;
-	top:0px;
-	left:0px;
+	top:425px;
+	left:425px;
 	display:block;
 	z-index:-10;
 }
@@ -34,9 +53,10 @@ ul.map
 .map li
 {
 	list-style: none;
-	display:inline-block;
+	display:block;
 	padding:0px;
 	margin:0px;
+	position:absolute;
 	-webkit-margin-before: 0px;
     -webkit-margin-after: 0px;
     -webkit-margin-start: 0px;
@@ -50,4 +70,19 @@ ul.map
 	height:72px;
 	background-image: url('../assets/tiles/tile.png');
 	padding:0px;
+}
+
+.tile.field
+{
+	background-image: url('../assets/tiles/fieldtile.png');
+}
+
+.tile.forest
+{
+	background-image: url('../assets/tiles/foresttile.png');
+}
+
+.tile.mountain
+{
+	background-image: url('../assets/tiles/mountaintile.png');
 }

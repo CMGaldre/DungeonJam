@@ -69,6 +69,14 @@ body {
   top: 0px;
   left: 0px;
 }
+.scan-line {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0px;
+  left: 0px;
+  background-image: url('../assets/tiles/scanline.png');
+}
 .title {
   font-family: 'Fredericka the Great', cursive;
   font-size: 4em;
@@ -100,19 +108,43 @@ body {
   margin-left: 20px;
 }
 .map-wrap {
-  width: 800px;
-  height: 800px;
+  width: 900px;
+  height: 900px;
   display: block;
   z-index: -10;
   position: absolute;
-  top: 225px;
-  left: 225px;
+  top: 0px;
+  left: 305px;
   overflow: hidden;
+  border: 1px solid white;
 }
-.map {
+.fog {
   position: absolute;
   top: 0px;
   left: 0px;
+  display: block;
+  z-index: -9;
+  width: 100%;
+  bottom: 0px;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0) 0%, #000000 44%);
+  /* ff3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(44%, #000000));
+  /* safari4+,chrome */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0) 0%, #000000 44%);
+  /* safari5.1+,chrome10+ */
+  background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0) 0%, #000000 44%);
+  /* opera 11.10+ */
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0) 0%, #000000 44%);
+  /* ie10+ */
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, #000000 44%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=1);
+  /* ie6-9 */
+}
+.map {
+  position: absolute;
+  top: 425px;
+  left: 425px;
   display: block;
   z-index: -10;
 }
@@ -129,9 +161,10 @@ ul.map {
 }
 .map li {
   list-style: none;
-  display: inline-block;
+  display: block;
   padding: 0px;
   margin: 0px;
+  position: absolute;
   -webkit-margin-before: 0px;
   -webkit-margin-after: 0px;
   -webkit-margin-start: 0px;
@@ -144,6 +177,15 @@ ul.map {
   background-image: url('../assets/tiles/tile.png');
   padding: 0px;
 }
+.tile.field {
+  background-image: url('../assets/tiles/fieldtile.png');
+}
+.tile.forest {
+  background-image: url('../assets/tiles/foresttile.png');
+}
+.tile.mountain {
+  background-image: url('../assets/tiles/mountaintile.png');
+}
 .player {
   background-image: url('../assets/sprites/tinyhero.png');
   display: block;
@@ -152,4 +194,46 @@ ul.map {
   position: absolute;
   left: 50%;
   top: 50%;
+}
+.options {
+  width: 300px;
+  height: 900px;
+  display: block;
+  z-index: -10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  border: 1px solid white;
+}
+.menu-items {
+  color: #FFFFFF;
+  font-family: 'Josefin Slab', serif;
+  font-size: 0.65em;
+  list-style: none;
+  padding: 0px;
+  padding-left: 5px;
+}
+.menu-items li {
+  margin-top: 5px;
+}
+.playerstatus {
+  /* background-image: url('../assets/sprites/base_char.png'); */
+  font-family: 'Josefin Slab', serif;
+  display: block;
+  width: 300px;
+  height: 433px;
+  color: #fff;
+  font-size: 0.5em;
+  position: relative;
+}
+.playername {
+  margin-left: 5px;
+  position: absolute;
+  bottom: 1px;
+}
+.class {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
 }
