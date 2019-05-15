@@ -19,7 +19,7 @@ export class GameMap extends React.Component{
   }
 
   render(){
-      var offset = 420; //nice
+      var offset = 225; 
       var mapPos = {left: this.props.value.mapcoords.x+offset+'px',
             top:this.props.value.mapcoords.y+offset+'px',
             position:'absolute'

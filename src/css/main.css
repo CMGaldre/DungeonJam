@@ -66,6 +66,7 @@ body {
   position: absolute;
   width: 1920px;
   height: 1080px;
+  background-image: url('../assets/backgrounds/gameframe.png');
   top: 0px;
   left: 0px;
 }
@@ -108,13 +109,13 @@ body {
   margin-left: 20px;
 }
 .map-wrap {
-  width: 900px;
-  height: 900px;
+  width: 512px;
+  height: 448px;
   display: block;
   z-index: -10;
   position: absolute;
-  top: 0px;
-  left: 305px;
+  top: 276px;
+  left: 671px;
   overflow: hidden;
   border: 1px solid white;
 }
@@ -143,8 +144,8 @@ body {
 }
 .map {
   position: absolute;
-  top: 425px;
-  left: 425px;
+  top: 225px;
+  left: 204px;
   display: block;
   z-index: -10;
 }
@@ -187,13 +188,33 @@ ul.map {
   background-image: url('../assets/tiles/mountaintile.png');
 }
 .player {
-  background-image: url('../assets/sprites/tinyhero.png');
+  background-image: url('../assets/sprites/base_char_sprite.png');
   display: block;
-  height: 27px;
-  width: 16px;
+  height: 40px;
+  width: 40px;
   position: absolute;
   left: 50%;
   top: 50%;
+  background-position: 0px 0px;
+}
+@keyframes walk_right {
+  100% {
+    background-position: -80px 0px;
+  }
+}
+.player.rwalk {
+  animation: walk_right 0.2s steps(2) infinite;
+}
+@keyframes walk_left {
+  0% {
+    background-position: 0px -40px;
+  }
+  100% {
+    background-position: -80px -40px;
+  }
+}
+.player.lwalk {
+  animation: walk_left 0.2s steps(2) infinite;
 }
 .options {
   width: 300px;

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as twitchbot from './twitchbot.js'; 
 import Game from './components/game.js';
 import './css/main.css';
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mattcnt/DungeonJam.git"
+    "url": "git+https://github.com/cmgaldre/DungeonJam.git"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -19,24 +19,29 @@
   "author": "C.M. Galdre",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mattcnt/DungeonJam/issues"
+    "url": "https://github.com/cmgaldre/DungeonJam/issues"
   },
   "homepage": ".",
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
+    "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
     "gulp": "^3.9.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.5",
-    "gulp-less": "^4.0.0",
-    "less": "^2.7.2",
-    "mongoose": "^5.2.4",
-    "nodemon": "^1.18.2",
+    "browser-sync": "^2.26.3",
+    "gulp-less": "^4.0.1",
+    "less": "^2.7.3",
+    "mongoose": "^5.4.19",
+    "nodemon": "^1.18.10",
     "react-script": "^2.0.5",
-    "tmi.js": "^1.2.1"
+    "tmi.js": "^1.4.2"
   },
-  "proxy": "http://localhost:8080"
+  "proxy": {
+    "/api/*":  {
+      "target": "http://localhost:3001"
+    }
+  }
 }

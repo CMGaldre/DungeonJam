@@ -15,7 +15,7 @@ let opts = {
 }
 
 // These are the commands the bot knows (defined below):
-let knownCommands = { echo, north }
+let knownCommands = { echo, north}
 
 // Function called when the "echo" command is issued:
 function echo (target, context, params) {
