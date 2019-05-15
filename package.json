@@ -28,7 +28,10 @@
     "express": "^4.16.4",
     "gulp": "^3.9.1",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "nodemon": "^1.18.10",
+    "react-script": "^2.0.5",
+    "tmi.js": "^1.4.2"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",

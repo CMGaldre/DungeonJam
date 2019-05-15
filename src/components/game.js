@@ -76,8 +76,7 @@ class Game extends React.Component {
                         }
                 }
                 m=0;
-        }
-        
+        }      
         return item;
   }
 
